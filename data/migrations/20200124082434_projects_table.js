@@ -11,6 +11,7 @@ exports.up = function(knex) {
         tbl.string("project_id")
             .notNullable()
             .references('id')
+            .inTable('projects')
         tbl.text("task_description").notNullable();
         tbl.text("notes");
         tbl.boolean("task_completed").default(false);
