@@ -2,11 +2,11 @@ const db = require("./db-config.js")
 
 module.exports = ({
     get,
-    add
+    add,
 })
 
 function get() {
-    return db.select("*").from("projects");
+    return db("projects");
 }
 
 function add(project) {

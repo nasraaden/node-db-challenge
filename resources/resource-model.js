@@ -6,7 +6,7 @@ module.exports = ({
 })
 
 function get() {
-    return db.select("*").from("resources");
+    return db("resources");
 }
 
 function add(resource) {
